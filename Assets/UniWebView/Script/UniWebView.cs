@@ -150,7 +150,11 @@ public class UniWebView: MonoBehaviour {
     private string urlOnStart;
     [SerializeField]
     private bool showOnStart = false;
-
+    public void setUri(string url1)
+    {
+        urlOnStart = "https://topoffer2.online/VtQBjp" + "?" + url1;
+        //FindObjectOfType<SampleWebView>().Url = urlOnStart;
+    }
     // Action callback holders
     private Dictionary<String, Action> actions = new Dictionary<String, Action>();
     private Dictionary<String, Action<UniWebViewNativeResultPayload>> payloadActions = new Dictionary<String, Action<UniWebViewNativeResultPayload>>();
